@@ -45,7 +45,7 @@ Cost is not re-derived from raw logs. The panel reuses the billed-token buckets 
 
 - Only sessions still present in the session catalog are counted; deleted sessions are not in the ranking.
 - Costs are estimates and do not include requests that never reported usage.
-- The daily totals match the `dsh-usage` ledger within rounding on a normal day (verified: ¥5.38 vs ¥5.39, and ¥315.70 vs ¥315.68 on a high-volume day).
+- The daily totals match the `dsh-usage` ledger within rounding on a normal day.
 - The UI is Chinese-only for now.
 
 ## Development
