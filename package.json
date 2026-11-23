@@ -1,0 +1,59 @@
+{
+  "name": "@local/spend-rank",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Daily spend ranking panel for the DeepSeek Harness Web GUI: which sessions ran on a given day, what each one cost, ranked high to low.",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "author": "sandwich-xz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandwich-xz/dsh-spend-rank.git"
+  },
+  "homepage": "https://github.com/sandwich-xz/dsh-spend-rank",
+  "bugs": {
+    "url": "https://github.com/sandwich-xz/dsh-spend-rank/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "usage",
+    "cost",
+    "spend",
+    "dashboard"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

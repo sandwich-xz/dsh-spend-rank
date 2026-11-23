@@ -1,0 +1,3 @@
+- insert:
+    - id: spend-rank
+      name: '@local/spend-rank'
